@@ -9,7 +9,7 @@ import io.reactivex.rxjava3.core.Observable
 object ReducingOperators {
     @JvmStatic
     fun main(args: Array<String>) {
-        //reduce:Similar to scan,but adds up all the values before emitting a single
+        //:Similar to scan,but adds up all the values before emitting a single
         Observable.just(3, 3, 94)
             .reduce { total: Int, next: Int -> total + next }
             .subscribe { s -> println(s) }

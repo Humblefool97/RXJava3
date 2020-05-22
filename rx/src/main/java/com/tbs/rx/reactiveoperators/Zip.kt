@@ -6,9 +6,10 @@ import io.reactivex.rxjava3.functions.Function3
 import java.time.LocalTime
 import java.util.concurrent.TimeUnit
 
-/**
- *
- */
+/*Take emission from each source,combine them in to one!
+When one of them sends an onComplete , it stops zipping.
+The emissions of others which are yet to emit are dropped as they have nothing to be paired with*/
+
 object Zip {
     @JvmStatic
     fun main(args: Array<String>) {
@@ -36,6 +37,4 @@ object Zip {
             .subscribe { s -> println(s) }
         Thread.sleep(3 * 1000)
     }
-
-
 }
