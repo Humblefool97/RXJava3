@@ -25,7 +25,5 @@ object AmbiguousOp {
             .subscribe { s -> println(s) }
 
         Thread.sleep(5 * 1000)
-
-
     }
 }
